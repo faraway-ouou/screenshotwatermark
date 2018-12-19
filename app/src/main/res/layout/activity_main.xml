@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/screenshot_rg_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/screenshot_rb_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="true"
+            android:text="图片水印" />
+        <RadioButton
+            android:id="@+id/screenshot_rb_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:text="文字水印" />
+
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/screenshot_rg_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/screenshot_rb_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="true"
+            android:text="中间" />
+        <RadioButton
+            android:id="@+id/screenshot_rb_left_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:text="左上角" />
+        <RadioButton
+            android:id="@+id/screenshot_rb_right_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:text="右上角" />
+        <RadioButton
+            android:id="@+id/screenshot_rb_left_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:text="左下角" />
+        <RadioButton
+            android:id="@+id/screenshot_rb_right_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:text="右下角" />
+
+    </RadioGroup>
+    <Button
+        android:text="截取当前Activity"
+        android:id="@+id/screenshot_btn_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+</LinearLayout>
