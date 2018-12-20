@@ -1,3 +1,4 @@
+## Android截取当前Activity并且添加水印（文字水印、图片水印）
 ## 功能介绍
  截取当前Activity添加水印
  
