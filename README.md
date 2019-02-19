@@ -27,7 +27,7 @@ allprojects {
                     builder.setWatermark(true);
                     //是否开启图片水印反之则是文字水印
                     builder.setImgWatermark(true);
-                    //添加水印图片
+                    //添加水印图片    这里记得把图片放到mipmap中因为如果把图片放在drawable中Android机型分辨率不一样水印也会出现对应尺寸问题 
                     builder.setwatermarkBitmap(ImageUtils.drawable2Bitmap(getResources().getDrawable(R.drawable.icon)));
                     //添加文字水印
                     builder.setText("这个是水印--------");
