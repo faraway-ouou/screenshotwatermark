@@ -27,7 +27,7 @@ allprojects {
                     builder.setWatermark(true);
                     //是否开启图片水印反之则是文字水印
                     builder.setImgWatermark(true);
-                    //添加水印图片    这里记得把图片放到mipmap中因为如果把图片放在drawable中Android机型分辨率不一样水印也会出现对应尺寸问题 
+                    //添加水印图片    
                     builder.setwatermarkBitmap(ImageUtils.drawable2Bitmap(getResources().getDrawable(R.drawable.icon)));
                     //添加文字水印
                     builder.setText("这个是水印--------");
@@ -75,3 +75,8 @@ allprojects {
 ```
 ### 效果图
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181219185021410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNzIyOTMw,size_16,color_FFFFFF,t_70)
+### 问题
+1.图片水印有一部分缺失 
+	
+原因：canvas.drawBitmap()画出来的bitmap和原bitmap大小不同，因为于安卓系统会根据bitmap的density和当前运行设备的density进行比较，不同会进行缩放。所以就会造成水印图片有一部分缺失
+解决方法： builder.setwatermarkBitmap(ImageUtils.drawable2Bitmap(getResources().getDrawable(R.drawable.icon)));此处设置水印图片的时候去获取mipmap中的图片而非drawable中图片
