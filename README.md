@@ -79,4 +79,5 @@ allprojects {
 1.图片水印有一部分缺失 
 	
 原因：canvas.drawBitmap()画出来的bitmap和原bitmap大小不同，因为于安卓系统会根据bitmap的density和当前运行设备的density进行比较，不同会进行缩放。所以就会造成水印图片有一部分缺失
+
 解决方法： builder.setwatermarkBitmap(ImageUtils.drawable2Bitmap(getResources().getDrawable(R.drawable.icon)));此处设置水印图片的时候去获取mipmap中的图片而非drawable中图片
